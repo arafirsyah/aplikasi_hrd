@@ -35,6 +35,7 @@
 						$sql = "SELECT * FROM canggota WHERE status='D' or status='P' ORDER BY id";
 						$hasil = mysql_query($sql) or die(mysql_error());
 						$jml = mysql_num_rows($hasil);
+						
 						$sql2 = "SELECT * FROM canggota WHERE status='P' ORDER BY id";
 						$hasil2 = mysql_query($sql2) or die(mysql_error());
 						$jml_p = mysql_num_rows($hasil2);
@@ -63,6 +64,7 @@
 									$bg="#FF0000";
 								else
 									$bg="#FFFFFF";
+								
 									echo"<tr bgcolor='$bg'>
 											<td align=center>$i</td>
 											<td align=center>$row[nama]</td>
@@ -70,6 +72,7 @@
 											<td align=center>$row[no_ktp]</td>
 											<td align=left>$row[alamat]</td>
 											<td align=left>$row[uker]</td>";
+											
 									if($row['status']=='P')
 									{
 										echo "<td align=center>
